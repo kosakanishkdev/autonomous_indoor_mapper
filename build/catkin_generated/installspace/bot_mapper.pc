@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: bot_mapper
+Description: Description of bot_mapper
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs geometry_msgs message_runtime

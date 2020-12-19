@@ -1,0 +1,8 @@
+prefix=/home/skpro19/catkin_ws/src/bot_mapper/build/devel
+
+Name: bot_mapper
+Description: Description of bot_mapper
+Version: 0.0.0
+Cflags: -I/home/skpro19/catkin_ws/src/bot_mapper/build/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs geometry_msgs message_runtime
