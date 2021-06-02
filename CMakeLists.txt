@@ -7,12 +7,23 @@ project(bot_mapper)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
+find_package(
+  catkin 
+  REQUIRED COMPONENTS
   roscpp
   std_msgs
   geometry_msgs
   message_generation
+  genmsg 
+  actionlib_msgs
+  actionlib
+  tf
+  pluginlib
+  costmap_2d
+  tf2_ros
 )
+
+find_package(Boost REQUIRED COMPONENTS system)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -51,7 +62,7 @@ find_package(catkin REQUIRED COMPONENTS
 #add_message_files(
   #FILES
   #Twist.msg
-  #Message2.msg
+  #Message2.msgcatkin_packa
 #)
 
 ## Generate services in the 'srv' folder
@@ -59,6 +70,12 @@ add_service_files(
   FILES
   StartService.srv
 #   Service2.srv
+)
+
+add_action_files(
+
+  DIRECTORY action FILES RotateBot.action
+
 )
 
 ## Generate actions in the 'action' folder
@@ -72,6 +89,8 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   geometry_msgs
+  actionlib_msgs
+  
 )
 
 ################################################
@@ -103,10 +122,12 @@ generate_messages(
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+
+
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES bot_mapper
-  CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime
+  CATKIN_DEPENDS roscpp std_msgs geometry_msgs message_runtime actionlib_msgs
 #  DEPENDS system_lib
 )
 
@@ -117,8 +138,9 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
+  ${Boost_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -202,7 +224,4 @@ include_directories(
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
-
-add_executable(bot_mapper src/test_class.cpp)
-target_link_libraries(bot_mapper ${catkin_LIBRARIES})
 

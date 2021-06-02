@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "bot_mapper: 0 messages, 1 services")
+message(STATUS "bot_mapper: 7 messages, 1 services")
 
-set(MSG_I_FLAGS "-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +17,44 @@ add_custom_target(bot_mapper_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" ""
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" "actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:bot_mapper/RotateBotResult:std_msgs/Header"
+)
+
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
 add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" ""
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" "actionlib_msgs/GoalID:bot_mapper/RotateBotActionResult:actionlib_msgs/GoalStatus:bot_mapper/RotateBotResult:bot_mapper/RotateBotFeedback:bot_mapper/RotateBotActionGoal:std_msgs/Header:bot_mapper/RotateBotActionFeedback:bot_mapper/RotateBotGoal"
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" ""
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" "actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:bot_mapper/RotateBotFeedback:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" ""
+)
+
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
+add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bot_mapper" "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" "actionlib_msgs/GoalID:bot_mapper/RotateBotGoal:std_msgs/Header"
 )
 
 #
@@ -28,6 +63,48 @@ add_custom_target(_bot_mapper_generate_messages_check_deps_${_filename}
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_cpp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bot_mapper
+)
 
 ### Generating Services
 _generate_srv_cpp(bot_mapper
@@ -49,7 +126,21 @@ add_custom_target(bot_mapper_generate_messages_cpp
 add_dependencies(bot_mapper_generate_messages bot_mapper_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
 add_dependencies(bot_mapper_generate_messages_cpp _bot_mapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -61,6 +152,48 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bot_mapper_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_eus(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper
+)
 
 ### Generating Services
 _generate_srv_eus(bot_mapper
@@ -82,7 +215,21 @@ add_custom_target(bot_mapper_generate_messages_eus
 add_dependencies(bot_mapper_generate_messages bot_mapper_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
 add_dependencies(bot_mapper_generate_messages_eus _bot_mapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -94,6 +241,48 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bot_mapper_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_lisp(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper
+)
 
 ### Generating Services
 _generate_srv_lisp(bot_mapper
@@ -115,7 +304,21 @@ add_custom_target(bot_mapper_generate_messages_lisp
 add_dependencies(bot_mapper_generate_messages bot_mapper_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
 add_dependencies(bot_mapper_generate_messages_lisp _bot_mapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,6 +330,48 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bot_mapper_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_nodejs(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper
+)
 
 ### Generating Services
 _generate_srv_nodejs(bot_mapper
@@ -148,7 +393,21 @@ add_custom_target(bot_mapper_generate_messages_nodejs
 add_dependencies(bot_mapper_generate_messages bot_mapper_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
 add_dependencies(bot_mapper_generate_messages_nodejs _bot_mapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -160,6 +419,48 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bot_mapper_generate_messages_nodejs
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
+_generate_msg_py(bot_mapper
+  "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper
+)
 
 ### Generating Services
 _generate_srv_py(bot_mapper
@@ -181,7 +482,21 @@ add_custom_target(bot_mapper_generate_messages_py
 add_dependencies(bot_mapper_generate_messages bot_mapper_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg" NAME_WE)
+add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg" NAME_WE)
 add_dependencies(bot_mapper_generate_messages_py _bot_mapper_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +518,9 @@ endif()
 if(TARGET geometry_msgs_generate_messages_cpp)
   add_dependencies(bot_mapper_generate_messages_cpp geometry_msgs_generate_messages_cpp)
 endif()
+if(TARGET actionlib_msgs_generate_messages_cpp)
+  add_dependencies(bot_mapper_generate_messages_cpp actionlib_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bot_mapper)
   # install generated code
@@ -213,6 +531,9 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bo
 endif()
 if(TARGET geometry_msgs_generate_messages_eus)
   add_dependencies(bot_mapper_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET actionlib_msgs_generate_messages_eus)
+  add_dependencies(bot_mapper_generate_messages_eus actionlib_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bot_mapper)
@@ -225,6 +546,9 @@ endif()
 if(TARGET geometry_msgs_generate_messages_lisp)
   add_dependencies(bot_mapper_generate_messages_lisp geometry_msgs_generate_messages_lisp)
 endif()
+if(TARGET actionlib_msgs_generate_messages_lisp)
+  add_dependencies(bot_mapper_generate_messages_lisp actionlib_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bot_mapper)
   # install generated code
@@ -235,6 +559,9 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
 endif()
 if(TARGET geometry_msgs_generate_messages_nodejs)
   add_dependencies(bot_mapper_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET actionlib_msgs_generate_messages_nodejs)
+  add_dependencies(bot_mapper_generate_messages_nodejs actionlib_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_mapper)
@@ -247,4 +574,7 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bot_
 endif()
 if(TARGET geometry_msgs_generate_messages_py)
   add_dependencies(bot_mapper_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET actionlib_msgs_generate_messages_py)
+  add_dependencies(bot_mapper_generate_messages_py actionlib_msgs_generate_messages_py)
 endif()

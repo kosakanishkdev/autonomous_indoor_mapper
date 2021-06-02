@@ -1,0 +1,11 @@
+<launch>
+
+    <arg name="husky_ns" default="/" />
+
+    <node name="teleop_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" ns="$(arg husky_ns)">
+
+        <remap from="cmd_vel" to="$(arg husky_ns)/cmd_vel" />
+
+    </node>
+
+</launch>

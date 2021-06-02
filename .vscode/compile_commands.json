@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/skpro19/catkin_ws/build/bot_mapper",
-  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"bot_mapper\\\" -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/number_counter.dir/src/test_class.cpp.o -c /home/skpro19/catkin_ws/src/bot_mapper/src/test_class.cpp",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"bot_mapper\\\" -I/home/skpro19/catkin_ws/devel/.private/bot_mapper/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/bot_mapper.dir/src/test_class.cpp.o -c /home/skpro19/catkin_ws/src/bot_mapper/src/test_class.cpp",
   "file": "/home/skpro19/catkin_ws/src/bot_mapper/src/test_class.cpp"
 },
 {

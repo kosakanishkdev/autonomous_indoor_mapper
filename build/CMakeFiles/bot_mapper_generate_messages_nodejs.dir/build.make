@@ -53,15 +53,84 @@ CMAKE_BINARY_DIR = /home/skpro19/catkin_ws/src/bot_mapper/build
 # Include the progress variables for this target.
 include CMakeFiles/bot_mapper_generate_messages_nodejs.dir/progress.make
 
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotResult.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotGoal.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotFeedback.js
+CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js
 CMakeFiles/bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/srv/StartService.js
 
 
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotResult.js: devel/share/bot_mapper/msg/RotateBotResult.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from bot_mapper/RotateBotResult.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: devel/share/bot_mapper/msg/RotateBotActionResult.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: devel/share/bot_mapper/msg/RotateBotResult.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from bot_mapper/RotateBotActionResult.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotAction.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotActionResult.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotResult.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotFeedback.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotActionGoal.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotActionFeedback.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js: devel/share/bot_mapper/msg/RotateBotGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from bot_mapper/RotateBotAction.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotGoal.js: devel/share/bot_mapper/msg/RotateBotGoal.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from bot_mapper/RotateBotGoal.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: devel/share/bot_mapper/msg/RotateBotActionFeedback.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalStatus.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: devel/share/bot_mapper/msg/RotateBotFeedback.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from bot_mapper/RotateBotActionFeedback.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotFeedback.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotFeedback.js: devel/share/bot_mapper/msg/RotateBotFeedback.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from bot_mapper/RotateBotFeedback.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js: devel/share/bot_mapper/msg/RotateBotActionGoal.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js: /opt/ros/melodic/share/actionlib_msgs/msg/GoalID.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js: devel/share/bot_mapper/msg/RotateBotGoal.msg
+devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Javascript code from bot_mapper/RotateBotActionGoal.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/msg
+
 devel/share/gennodejs/ros/bot_mapper/srv/StartService.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 devel/share/gennodejs/ros/bot_mapper/srv/StartService.js: ../srv/StartService.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from bot_mapper/StartService.srv"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/skpro19/catkin_ws/src/bot_mapper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Javascript code from bot_mapper/StartService.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/skpro19/catkin_ws/src/bot_mapper/srv/StartService.srv -Ibot_mapper:/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/melodic/share/actionlib_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p bot_mapper -o /home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/gennodejs/ros/bot_mapper/srv
 
 bot_mapper_generate_messages_nodejs: CMakeFiles/bot_mapper_generate_messages_nodejs
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotResult.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionResult.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotAction.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotGoal.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionFeedback.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotFeedback.js
+bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/msg/RotateBotActionGoal.js
 bot_mapper_generate_messages_nodejs: devel/share/gennodejs/ros/bot_mapper/srv/StartService.js
 bot_mapper_generate_messages_nodejs: CMakeFiles/bot_mapper_generate_messages_nodejs.dir/build.make
 

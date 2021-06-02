@@ -133,6 +133,22 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_mapper/action" TYPE FILE FILES "/home/skpro19/catkin_ws/src/bot_mapper/action/RotateBot.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_mapper/msg" TYPE FILE FILES
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotAction.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionGoal.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionResult.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotActionFeedback.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotGoal.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotResult.msg"
+    "/home/skpro19/catkin_ws/src/bot_mapper/build/devel/share/bot_mapper/msg/RotateBotFeedback.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_mapper/cmake" TYPE FILE FILES "/home/skpro19/catkin_ws/src/bot_mapper/build/catkin_generated/installspace/bot_mapper-msg-paths.cmake")
 endif()
 

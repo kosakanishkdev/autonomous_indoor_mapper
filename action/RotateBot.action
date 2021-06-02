@@ -1,0 +1,5 @@
+float32 final_angle
+---
+bool result
+---
+float32 curr_angle

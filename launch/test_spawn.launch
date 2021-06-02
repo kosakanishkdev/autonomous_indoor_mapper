@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="multimaster" default="false"/>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+
+  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED false)"/>
+  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
+  <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
+
+  <!-- Optionally disable teleop control -->
+  <arg name="joystick" default="true" />
+
+  
+    
+  
+
+     <include file="$(find bot_mapper)/launch/test_control.launch">
+        <arg name="multimaster" value="$(arg multimaster)"/>
+        <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+        <arg name="realsense_enabled" default="$(arg realsense_enabled)"/>
+        <arg name="urdf_extras" value="$(arg urdf_extras)"/>
+      </include>
+
+     
+
+  
+    
+    <!-- Spawn robot in gazebo -->
+    
+
+ 
+
+</launch>

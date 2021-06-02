@@ -1,0 +1,15 @@
+<launch>
+
+    <arg name="husky_ns" default="" />
+
+    <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" ns="$(arg husky_ns)" >
+
+        <remap  from="/scan" to="$(arg husky_ns)/scan" />
+        <param name="odom_frame" value="$(arg husky_ns)/odom" />
+        <param name="base_frame" value="$(arg husky_ns)/base_link" />
+        <param name="map_frame" value="$(arg husky_ns)/map" />
+
+    </node>
+
+
+</launch>

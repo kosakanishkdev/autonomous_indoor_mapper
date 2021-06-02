@@ -1,0 +1,47 @@
+<launch>
+  <!-- No namespace here as we will share this description. 
+       Access with slash at the beginning -->
+
+
+
+  
+  
+  <arg name="laser_enabled" default="true"/>
+  <arg name="realsense_enabled" default="false"/>
+  <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/>
+  <arg name="yaw" default="0.0"/>
+
+  <include file="$(find bot_mapper)/launch/test_one_robot.launch" >
+
+    <arg name="husky_ns" value="husky_1" />
+    <arg name="x" value="10.0"/>
+    <arg name="y" value="-5.0"/>
+    <arg name="z" value="0.0"/>
+    <arg name="yaw" value="0.0"/>
+
+
+  </include>
+
+  <include file="$(find bot_mapper)/launch/test_one_robot.launch" >
+
+    <arg name="husky_ns" value="husky_2" />
+    <arg name="x" value="-10.0"/>
+    <arg name="y" value="5.0"/>
+    <arg name="z" value="0.0"/>
+    <arg name="yaw" value="0.0"/>
+
+
+  </include>
+  
+
+  
+
+
+</launch>
+ 
+
+    
+ 

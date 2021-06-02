@@ -1,0 +1,6 @@
+<launch>
+
+     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find bot_mapper)/rviz/map_merge.rviz" />
+
+
+</launch>

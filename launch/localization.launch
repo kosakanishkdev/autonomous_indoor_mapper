@@ -1,0 +1,8 @@
+<launch>
+
+    <arg name="husky_ns" value="husky_1" />
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" ns="$(arg husky_ns)">
+        <rosparam command="load" file="$(find bot_mapper)/config/localization.yaml" subst_value="true" />
+    </node>
+</launch>

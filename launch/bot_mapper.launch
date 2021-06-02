@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <include file="$(find bot_mapper)/launch/husky_my_world.launch"  launch-prefix="xterm -e" />
+  <include file="$(find bot_mapper)/launch/view_robot.launch"  launch-prefix="xterm -e" />
+  <include file="$(find bot_mapper)/launch/move_base_mapless_demo.launch"  launch-prefix="xterm -e" />
+    
+</launch>
